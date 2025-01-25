@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f6f2e9;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
+
+#back{
+    background-image: url(/im/b.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.6;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.section-wrap{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 75%;
+    height: 75vh;
+    padding: 50px;
+    border-radius: 5px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999;
+}
+
+/* ================================================== Header ================================================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.head-logo{
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span{
+    color: #fd6537;
+}
+
+.nav-item {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 15px;
+    cursor: pointer;
+    position: relative;
+    
+   
+}
+
+.nav-item::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    /* background-color: #f6f2e9; */
+    background-color: #fd6537;
+    width: 100%;
+    height: 2px;
+    box-shadow: 0 0 5px #f6f2e9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+    
+}
+
+.nav-item:hover::before{
+    transform: scaleX(1);
+}
+
+.active{
+    color: #fd6537;
+}
+
+.active::before{
+    background-color: #fd6537;
+}
+
+.hd-cta button{
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fd6537;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.hd-ct-1{
+    background-color: transparent;
+}
+
+.hd-cta button:hover{
+    background-color: #ff835e;
+}
+
+/* ========================== Hero Content ========================== */
+
+.hr-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.ct-right img{
+    width: 100%;
+}
+
+.ct-right, .ct-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline{
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.hr-description{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d3cfc6;
+    margin-bottom: 50px;
+}
+
+#location{
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+#location option{
+    background-color: #fd6537;
+    font-size: 1rem;
+}
+
+.hr-actions button {
+    font-size: 1rem;
+    background-color: #f6f2e9;
+    color: #333333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hr-actions button:hover{
+    background-color: #fd6537;
+    color: #f6f2e9;
+}
+
+.hr-actions{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border: 1px solid #f6f2e9;
+    padding: 20px;
+    border-radius: 3px;
+}
